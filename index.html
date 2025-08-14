@@ -8,8 +8,19 @@
 </head>
 <body>
 
-    <button class="btn">Clear Canvas</button>
-
+    <div class="controls">
+        
+        <div class="canvas">
+            <h3>Choose your canvas size</h3>
+            <label for="canvas-width">Canvas Width(px): </label>
+            <input type="number" min="0" max="1000" name="canvas-width" id="canvas-width">
+            <label for="canvas-height">Canvas Height(px): </label>
+            <input type="number" min="0" max="625" name="canvas-height" id="canvas-height">
+            <button type="submit" name="canvas-size-btn" id="canvas-size-btn">Submit</button>
+            
+        </div>
+        <button class="btn">Clear Canvas</button>    
+    </div>
     <div class="container">
         
     </div>
