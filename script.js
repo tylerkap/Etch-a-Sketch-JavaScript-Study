@@ -1,15 +1,8 @@
 function generateBoxes(width, height) {
     container.replaceChildren();
-    
-    
-    
     let canvasSqarePixel = width * height;
-    let numBoxes = canvasSqarePixel / 625;
+    let numBoxes = Math.ceil(canvasSqarePixel / 625);
 
-    
-    
-    let containerWidth = width * 25;
-    let containerHeight = height * 25;
 
     container.style.cssText = `width: ${width}px; height: ${height}px;`;
     
@@ -28,6 +21,7 @@ function generateBoxes(width, height) {
 
     //Adding mouseover listener event for all boxes
 
+
     boxes.forEach((box) => {
 
         box.addEventListener('mouseover', () => {
@@ -43,6 +37,7 @@ function generateBoxes(width, height) {
         });
         
     });
+ 
 
     //listener event to clear canvas
 
@@ -56,8 +51,8 @@ function generateBoxes(width, height) {
 function generateCanvasSize() {
 
     canvasSizeBtn.addEventListener('click', () => {
-        let width = userWidthInput.value;
-        let height = userWidthInput.value;
+        let width = Number(userWidthInput.value);
+        let height = Number(userHeightInput.value);
 
         generateBoxes(width, height);
 
